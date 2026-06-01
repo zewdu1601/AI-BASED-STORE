@@ -1,0 +1,72 @@
+.admin-payments {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.payment-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+.pay-metric {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 1rem;
+  border: 1px solid var(--border-color);
+}
+
+.pm-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+}
+
+.pm-icon.inflow { background: rgba(16, 185, 129, 0.1); color: #10b981; }
+.pm-icon.outflow { background: rgba(239, 68, 68, 0.1); color: #ef4444; }
+
+.pm-info p { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.25rem; }
+.pm-info h3 { font-size: 1.25rem; font-weight: 800; }
+
+.type-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.type-pill.inflow { background: rgba(16, 185, 129, 0.1); color: #10b981; }
+.type-pill.outflow { background: rgba(239, 68, 68, 0.1); color: #ef4444; }
+
+.method-cell { display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; color: var(--text-muted); }
+
+.gateways-overview { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; }
+.gateway-card { padding: 1.5rem; }
+.gw-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; }
+.gw-logo { width: 36px; height: 36px; border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; font-weight: 900; color: white; }
+.gw-logo.stripe { background: #635bff; }
+.gw-logo.paypal { background: #003087; }
+.gw-header h4 { font-size: 1rem; margin-bottom: 0.15rem; }
+.gw-header span { font-size: 0.75rem; color: var(--text-muted); }
+
+.gw-stats { display: flex; justify-content: space-between; padding-top: 1.5rem; border-top: 1px solid var(--border-color); }
+.gw-stat { display: flex; flex-direction: column; gap: 0.25rem; }
+.gw-stat span { font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; }
+.gw-stat strong { font-size: 1rem; }
+
+@media (max-width: 768px) {
+  .payment-metrics-grid { grid-template-columns: 1fr 1fr; }
+}
