@@ -1,0 +1,244 @@
+.promotion-governance-hub {
+  padding: 32px;
+  min-height: 100vh;
+  color: #fff;
+}
+
+.governance-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 32px;
+}
+
+.governance-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin: 0;
+}
+
+.governance-subtitle {
+  color: #718096;
+  margin-top: 6px;
+  font-size: 1rem;
+}
+
+.new-promo-btn {
+  background: #4f46e5;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 15px rgba(79, 70, 229, 0.3);
+}
+
+.new-promo-btn:hover {
+  background: #4338ca;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.4);
+}
+
+/* Metrics Grid V5 */
+.metrics-grid-v5 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.metric-card-v5 {
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.metric-icon-box {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #718096;
+}
+
+.metric-icon-box.white {
+  color: #fff;
+}
+
+.metric-content p {
+  color: #718096;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.metric-content h3 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin: 4px 0 0;
+}
+
+/* Governance Controls */
+.governance-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  margin-bottom: 24px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.search-box-v5 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  max-width: 800px;
+  color: #718096;
+}
+
+.search-box-v5 input {
+  background: transparent;
+  border: none;
+  color: #fff;
+  width: 100%;
+  font-size: 1rem;
+  outline: none;
+}
+
+.schedule-btn {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Governance Table - Packed Rows */
+.table-container-v5 {
+  padding: 0;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+}
+
+.governance-table {
+  width: 100%;
+  border-collapse: collapse; /* Attached rows */
+}
+
+.governance-table th {
+  padding: 16px 24px;
+  text-align: left;
+  color: #718096;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.governance-table td {
+  padding: 16px 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  color: #e2e8f0;
+}
+
+.governance-table tbody tr {
+  transition: all 0.2s;
+}
+
+.governance-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.campaign-name {
+  font-weight: 700;
+  color: #fff;
+}
+
+.promo-badge {
+  background: rgba(128, 90, 213, 0.1);
+  color: #9f7aea;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-family: monospace;
+  font-weight: 700;
+}
+
+.discount-cell {
+  color: #10b981;
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+/* Usage Progress */
+.usage-progress-container {
+  width: 150px;
+}
+
+.usage-text {
+  font-size: 0.75rem;
+  color: #718096;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.progress-bg {
+  height: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4f46e5, #818cf8);
+  border-radius: 3px;
+}
+
+/* Status V5 */
+.status-v5 {
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.status-v5.active { color: #10b981; }
+.status-v5.upcoming { color: #f59e0b; }
+
+/* Action Hub V5 */
+.action-hub-v5 {
+  display: flex;
+  gap: 12px;
+}
+
+.hub-icon-btn {
+  background: transparent;
+  border: none;
+  color: #718096;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.hub-icon-btn:hover {
+  color: #fff;
+}

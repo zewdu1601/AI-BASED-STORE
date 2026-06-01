@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap');
+
+:root {
+  --primary: #007acc;
+  --secondary: #569cd6;
+  --accent: #dcdcaa;
+  --success: #6abf59;
+  --warning: #d7ba7d;
+  --danger: #f44747;
+
+  /* VS Code Dark */
+  --bg-main: #1e1e1e;
+  --bg-gradient: linear-gradient(180deg, #252526 0%, #1e1e1e 100%);
+  --sidebar-bg: #252526;
+  --navbar-bg: #2d2d30;
+  --card-bg: #1f1f1f;
+  --card-hover: #2a2a2d;
+  --text-main: #d4d4d4;
+  --text-muted: #9f9f9f;
+  --text-main-rgb: 212, 212, 212;
+  --border-color: rgba(255, 255, 255, 0.08);
+  --shadow-color: rgba(0, 0, 0, 0.35);
+  --brightness: 1;
+}
+
+[data-theme='light'], .light-theme {
+  /* Pure Whiteness */
+  --bg-main: #f8fafc;
+  --bg-gradient: linear-gradient(135deg, #f1f5f9 0%, #f8fafc 100%);
+  --sidebar-bg: rgba(255, 255, 255, 0.98);
+  --navbar-bg: rgba(255, 255, 255, 0.9);
+  --card-bg: #ffffff;
+  --card-hover: #f1f5f9;
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --border-color: rgba(0, 0, 0, 0.08);
+  --shadow-color: rgba(0, 0, 0, 0.05);
+  --brightness: 1.02;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+}
+
+body {
+  background-color: var(--bg-main);
+  background: var(--bg-gradient);
+  color: var(--text-main);
+  min-height: 100vh;
+  filter: brightness(var(--brightness));
+  transition: background 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+              color 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+              filter 0.4s ease;
+  overflow-x: hidden;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-main);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* Editor-style Card Panels */
+.glass-card {
+  background: #252526;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-3px);
+  background: #2a2a2e;
+  border-color: rgba(0, 122, 204, 0.5);
+}
+
+/* Global Typography */
+h1, h2, h3, h4, h5 {
+  color: var(--text-main);
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+/* Status Pills */
+.status-pill {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.status-pill.success { background: rgba(16, 185, 129, 0.1); color: var(--success); }
+.status-pill.pending { background: rgba(245, 158, 11, 0.1); color: var(--warning); }
+.status-pill.danger { background: rgba(239, 68, 68, 0.1); color: var(--danger); }
+
+/* Buttons */
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.5);
+}
